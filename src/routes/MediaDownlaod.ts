@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express";
+// @ts-ignore
 import { igdl, youtube } from "btch-downloader";
 
 const router: Router = Router();
