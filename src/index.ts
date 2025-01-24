@@ -6,7 +6,11 @@ const app: Application = express();
 const PORT = 3000;
 
 app.use(express.json());
-app.use(cors());
+app.use(
+   cors({
+      origin: "*",
+   })
+);
 
 // Routes
 app.use("/api", downloadRoutes);
