@@ -10,6 +10,9 @@
       "start:prod": "node dist/index.js",
       "lint": "eslint src/**/*.ts"
    },
+   "engines": {
+      "node": ">=18.19.0"
+   },
    "keywords": [],
    "author": "",
    "license": "ISC",
