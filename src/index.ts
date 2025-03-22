@@ -3,7 +3,7 @@ import downloadRoutes from "./routes/MediaDownlaod";
 import cors from "cors";
 
 const app: Application = express();
-const PORT = 3000;
+const PORT = 3000|| 4000;
 
 app.use(express.json());
 app.use(
