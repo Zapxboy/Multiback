@@ -14,6 +14,7 @@ router.post("/yt", async (req: Request, res: Response): Promise<void> => {
    if (data) {
       res.status(200).json({ success: true, data });
    } else {
+      // console.log(data);
       res.status(400).json({ error: "Failed to download media" });
    }
 });
