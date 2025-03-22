@@ -29,7 +29,7 @@ router.post("/Instagram", async (req: Request, res: Response): Promise<void> => 
    console.log(resdata);
    for (let media of data) {
       new Promise((resolve) => setTimeout(resolve, 2000));
-      // console.log(media.url);
+      console.log(media.url);
    }
    res.status(200).json({ success: true, data });
 });

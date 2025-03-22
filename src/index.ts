@@ -9,20 +9,18 @@ app.use(express.json());
 app.use(
    cors({
       origin: "*",
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-      allowedHeaders: ["Content-Type", "Authorization"],
    })
 );
 
-// Explicitly handle preflight requests for all routes
-app.options("*", cors());
-
+// Routes
 app.use("/api", downloadRoutes);
 
+// Default route
 app.get("/", (req: Request, res: Response) => {
    res.send("Media Downloader API is running");
 });
 
+// Start server
 app.listen(PORT, () => {
    console.log(`Server is running at http://localhost:${PORT}`);
 });
