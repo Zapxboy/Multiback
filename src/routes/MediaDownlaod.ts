@@ -4,7 +4,7 @@ import { Router, Request, Response } from "express";
 import { ytmp3, ytmp4, igdl } from "ruhend-scraper";
 
 const router: Router = Router();
-router.post("/Youtube", async (req: Request, res: Response): Promise<void> => {
+router.post("/yt", async (req: Request, res: Response): Promise<void> => {
    const { url } = req.body;
    if (!url) {
       res.status(400).json({ error: "URL is required" });
